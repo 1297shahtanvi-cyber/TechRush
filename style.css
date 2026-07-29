@@ -1,0 +1,246 @@
+*{
+    padding:0;
+    margin:0;
+}
+body
+{
+    background-color: aliceblue;
+    text-align: center;
+}
+.navbar{
+    
+    position: sticky;
+    top:0;
+    background-color: rgba(48, 41, 41, 0.993);
+    color: #38b000;
+    display: flex;
+    align-items: center;
+    width:100%;
+    height: 8vmin;
+    gap:50px;
+    opacity: 0.9;
+    
+}
+.heading
+{
+    font-size: 6vmin;
+    color: #70e000;
+}
+.menu
+{
+    font-size: larger;
+    display: flex;
+    margin-left: 200px;
+    gap:10vmin;
+}
+.main
+{
+ background-image:url(bgmain.png);  
+ background-size: cover; 
+ display: flex;
+ justify-content: center;
+ text-align: center;
+ align-items: center;
+ height:100vmin;
+ width:100%;
+ 
+}
+.tagline
+{
+    
+    justify-content: center;
+    text-align: center;
+    
+}
+#sent1{
+    color: white;
+     font-family: 'Montserrat';
+     font-size: 8vmin;
+      text-shadow: 0 0 50px #ccff33;
+     
+}
+#sent2{
+    margin-top: 20px;
+    font-family: sans-serif;
+    font-size: 5vmin;
+    color: aliceblue;
+    text-shadow: 0 0 30px #03045e;
+}
+
+.topdestination
+{
+align-items: center;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap:6vmin;
+
+}
+.places:hover
+{
+    cursor: pointer;
+}
+#places1 {
+    width: 300px;
+    height: 300px;
+    background-image: url("tajmahal.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10%;
+    border: 3px solid #582f0e;
+}
+
+#places2
+{
+    background-image: url(kutch.png);
+    width:300px;
+    height:300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+     border-radius: 10%;
+     border: 3px solid #582f0e;
+}
+#places3
+{
+    background-image: url(goa.png);
+   width:300px;
+    height:300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+     border-radius: 10%;
+     border: 3px solid #582f0e;
+    
+}
+#places4
+{
+    background-image: url(csmt.png);
+    width:300px;
+    height:300px;
+   background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+     border-radius: 10%;
+     border: 3px solid #582f0e;
+    
+}
+#places5
+{
+    background-image: url(ellora.png);
+    width:300px;
+    height:300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+     border-radius: 10%;
+     border: 3px solid #582f0e;
+    
+}
+#places6
+{
+    background-image: url(nalanda.png);
+    width:300px;
+    height:300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+     border-radius: 10%;
+     border: 3px solid #582f0e;
+    
+}
+#places7
+{
+    background-image: url(golden_temple.png);
+    width:300px;
+    height:300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+     border-radius: 10%;
+     border: 3px solid #582f0e;
+}
+
+#places8
+{
+    background-image: url(hawamahal.png);
+    width:300px;
+    height:300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+     border-radius: 10%;
+     border: 3px solid #582f0e;
+}
+
+#places9
+{
+    background-image: url(ooty.png);
+    width:300px;
+    height:300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+     border-radius: 10%;
+     border: 3px solid #582f0e;
+}
+
+#places10
+{
+    background-image: url(ganga.png);
+    width:300px;
+    height:300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+     border-radius: 10%;
+     border: 3px solid #582f0e;
+}
+
+#places11
+{
+    background-image: url(meghalya.png);
+    width:300px;
+    height:300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+     border-radius: 10%;
+     border: 3px solid #582f0e;
+}
+
+#places12
+{
+    background-image: url(jag.png);
+    width:300px;
+    height:300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+     border-radius: 10%;
+     border: 3px solid #582f0e;
+}
+
+.infoBox{
+    position:absolute;
+    
+    background:rgba(0,0,0,0.7);
+    color:white;
+    padding:15px;
+    transform:translateY(100%);
+    transition:0.4s ease;
+    display:flex;
+    flex-direction: column;
+}
+
+.place1:hover .infoBox{
+    transform:translateY(0);
+}
+.hide
+{
+    display: none;
+}
+
+
+
