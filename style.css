@@ -234,12 +234,9 @@ gap:6vmin;
     flex-direction: column;
 }
 
+
 .place1:hover .infoBox{
     transform:translateY(0);
-}
-.hide
-{
-    display: none;
 }
 
 

@@ -88,19 +88,31 @@ const placeInfo = {
     }
 };
 
-const places = document.querySelectorAll(".place");
-const infoBox = document.getElementById("#infoBox");
+const places = document.querySelectorAll(".places");
+const infoBox = document.querySelector(".infoBox");
 
 
 places.forEach(place => {
     place.addEventListener("mouseenter", () => {
-        const data = placeInfo[place.id];
-
-           infoBox.innerHTML = `
+          const data=placeInfo[place.id];
+          console.log(data);
+           div=document.createElement("div");
+           div.innerHTML = `
             <h3>${data.name}</h3>
+             <br>
             <p>${data.famous}</p>
-           <p>rating: ${data.rating}</p>
+            <br>
+           <p>Rating: ${data.rating}</p>
         `;
+        div.style.background="rgba(43, 30, 30, 0.7)";
+        div.style.color="white";
+        div.display = "flex";
+        div.style.borderRadius= "13%";
+        
+        place.appendChild(div);
+    })
+    place.addEventListener("mouseleave",()=>{
+        place.innerHTML="";
     });
  });
 
