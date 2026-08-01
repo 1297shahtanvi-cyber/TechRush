@@ -1,77 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Techrush</title>
-    <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
     <div class="navbar">
-    <h1 class="heading"><i>#Traveller</i></h1>
-    <div class="menu">
-        <a>Home</a>
-        <a>Top Destination</a>
-        <a>Seasonal Trending</a>
-        <a>Budget Planner</a>
+      <h1 class="heading" id="web"><i></i></h1>
+      <div class="menu">
+        <a href="#home">Home</a>
+        <a href="#top-destination">Top Destination</a>
+        <a href="#seasonal-trending">Seasonal Trending</a>
+        <a href="#budget-planner">Budget Planner</a>
+      </div>
     </div>
-    </div>
-    <div class="main">
-
-    <div class="tagline">
+    <div class="main" id="home">
+      <div class="tagline">
         <p id="sent1"><b>Where Every Journey Begins !</b></p>
         <p id="sent2"><b>Travel More, Worry Less...</b></p>
+      </div>
     </div>
-</div>
-<br><br>
-<div class="top_dest">
-<h1 class="heading">Top Destination</h1>
-<br><br>
-<div class="topdestination">
-<div id="places1" class="places">    
-</div>
-<div id="places2" class="places">
-</div>
-<div id="places3" class="places">
-</div>
-<div id="places4" class="places">
-</div>
-<div id="places5" class="places">
-</div>
-<div id="places6" class="places">
-</div>
-<div id="places7" class="places">  
-</div>
-<div id="places8" class="places">
-</div>
-<div id="places9" class="places">
-</div>
-<div id="places10" class="places">
-</div>
-<div id="places11" class="places">
-</div>
-<div id="places12" class="places">
-</div>
-</div>
-<br><br>
-</div>
-<div class="seasonal_trending">
-<h1 class="heading">Seasonal Trending</h1>
-<br><br>
-<div class="seaTrend">
-    <div class="seap"><img src="images/seasonal.png"></div>
-
-    <div class="seainfo">
-        <p> <b>Every season tells a different story!!</b><br><br>Discover the perfect destination to match yours. From snowy peaks and sunny beaches to lush green escapes, explore the hottest travel spots handpicked for every season.</p>
-    
-    <button class="explore">Explore
-        <i  class="fa-solid fa-angle-right  arrow"></i>
-    </button>
+    <br /><br />
+    <div class="top_dest" id="top-destination">
+      <h1 class="heading">Top Destination</h1>
+      <br /><br />
+      <div class="topdestination">
+        <div id="places1" class="places"></div>
+        <div id="places2" class="places"></div>
+        <div id="places3" class="places"></div>
+        <div id="places4" class="places"></div>
+        <div id="places5" class="places"></div>
+        <div id="places6" class="places"></div>
+        <div id="places7" class="places"></div>
+        <div id="places8" class="places"></div>
+        <div id="places9" class="places"></div>
+        <div id="places10" class="places"></div>
+        <div id="places11" class="places"></div>
+        <div id="places12" class="places"></div>
+      </div>
+      <br /><br />
     </div>
-</div>
-</div>
+    <div class="seasonal_trending" id="seasonal-trending">
+      <h1 class="heading">Seasonal Trending</h1>
+      <br /><br />
+      <div class="seaTrend">
+        <div class="seap"><img src="images/seasonal.png" /></div>
 
-</body>
-<script src="app.js"></script>
+        <div class="seainfo">
+          <p>
+            <b>Every season tells a different story!!</b><br /><br />Discover
+            the perfect destination to match yours. From snowy peaks and sunny
+            beaches to lush green escapes, explore the hottest travel spots
+            handpicked for every season.
+          </p>
+          <a href="explore.html" target="_blank"
+            ><br />
+            <button class="explore">
+              Explore
+              <i class="fa-solid fa-angle-right arrow"></i></button
+          ></a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
 </html>

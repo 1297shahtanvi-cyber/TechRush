@@ -1,312 +1,289 @@
-*{
-    padding:0;
-    margin:0;
+* {
+  padding: 0;
+  margin: 0;
 }
-body
-{
-    background-color: aliceblue;
-    text-align: center;
+html {
+  scroll-behavior: smooth;
 }
-.navbar{
-    
-    position: sticky;
-    top:0;
-    background-color: black;
-    color: white;
-    display: flex;
-    align-items: center;
-    width:100%;
-    height: 8vmin;
-    gap:50px;
-    opacity: 0.7;
-    
+body {
+  background-color: aliceblue;
+  text-align: center;
 }
-.navbar h1{
-    color:rgb(232, 154, 9);
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 8vmin;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  gap: 30px;
+  opacity: 0.7;
 }
-.heading
-{
-    font-size: 6vmin;
-    color: darkgreen;
+.navbar h1 {
+  color: rgb(232, 154, 9);
+  flex-shrink: 0;
+  font-style: italic;
 }
-.menu
-{
-    font-size: larger;
-    display: flex;
-    margin-left: 200px;
-    gap:10vmin;
-}
-.main
-{
- background-image:url(bgmain.png);  
- background-size: cover; 
- display: flex;
- justify-content: center;
- text-align: center;
- align-items: center;
- height:100vmin;
- width:100%;
- 
-}
-.tagline
-{
-    
-    justify-content: center;
-    text-align: center;
-    
-}
-#sent1{
-    color: white;
-     font-family: 'Montserrat';
-     font-size: 8vmin;
-      text-shadow: 0 0 50px #ccff33;
-     
-}
-#sent2{
-    margin-top: 20px;
-    font-family: sans-serif;
-    font-size: 5vmin;
-    color: aliceblue;
-    text-shadow: 0 0 30px #03045e;
+.heading {
+  font-size: 6vmin;
+  color: darkgreen;
 }
 
-.topdestination
-{
-align-items: center;
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap:6vmin;
-
+.menu {
+  font-size: larger;
+  display: flex;
+  align-items: center;
+  gap: clamp(2rem, 5vmin, 6rem);
+  flex-shrink: 0;
 }
-.places:hover
-{
-    cursor: pointer;
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+.main {
+  background-image: url("images/bgmain.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 100vmin;
+  width: 100%;
+}
+.tagline {
+  justify-content: center;
+  text-align: center;
+}
+#sent1 {
+  color: white;
+  font-family: "Montserrat";
+  font-size: 8vmin;
+  text-shadow: 0 0 50px #ccff33;
+}
+#sent2 {
+  margin-top: 20px;
+  font-family: sans-serif;
+  font-size: 5vmin;
+  color: aliceblue;
+  text-shadow: 0 0 30px #03045e;
+}
+/* .top_dest {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+} */
+.topdestination {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6vmin;
+}
+.places {
+  position: relative;
+  overflow: hidden;
+}
+.places:hover {
+  cursor: pointer;
 }
 #places1 {
-    width: 300px;
-    height: 300px;
-    background-image: url("tajmahal.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 10%;
-    border: 3px solid #582f0e;
+  width: 300px;
+  height: 300px;
+  background-image: url("images/tajmahal.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10%;
+  border: 3px solid #582f0e;
 }
 
-#places2
-{
-    background-image: url(kutch.png);
-    width:300px;
-    height:300px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-     border-radius: 10%;
-     border: 3px solid #582f0e;
+#places2 {
+  background-image: url("images/kutch.png");
+  width: 300px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10%;
+  border: 3px solid #582f0e;
 }
-#places3
-{
-    background-image: url(goa.png);
-   width:300px;
-    height:300px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-     border-radius: 10%;
-     border: 3px solid #582f0e;
-    
+#places3 {
+  background-image: url("images/goa.png");
+  width: 300px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10%;
+  border: 3px solid #582f0e;
 }
-#places4
-{
-    background-image: url(csmt.png);
-    width:300px;
-    height:300px;
-   background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-     border-radius: 10%;
-     border: 3px solid #582f0e;
-    
+#places4 {
+  background-image: url("images/csmt.png");
+  width: 300px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10%;
+  border: 3px solid #582f0e;
 }
-#places5
-{
-    background-image: url(ellora.png);
-    width:300px;
-    height:300px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-     border-radius: 10%;
-     border: 3px solid #582f0e;
-    
+#places5 {
+  background-image: url("images/ellora.png");
+  width: 300px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10%;
+  border: 3px solid #582f0e;
 }
-#places6
-{
-    background-image: url(nalanda.png);
-    width:300px;
-    height:300px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-     border-radius: 10%;
-     border: 3px solid #582f0e;
-    
+#places6 {
+  background-image: url("images/nalnda.png");
+  width: 300px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10%;
+  border: 3px solid #582f0e;
 }
-#places7
-{
-    background-image: url(golden_temple.png);
-    width:300px;
-    height:300px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-     border-radius: 10%;
-     border: 3px solid #582f0e;
+#places7 {
+  background-image: url("images/golden_temple.png");
+  width: 300px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10%;
+  border: 3px solid #582f0e;
 }
 
-#places8
-{
-    background-image: url(hawamahal.png);
-    width:300px;
-    height:300px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-     border-radius: 10%;
-     border: 3px solid #582f0e;
+#places8 {
+  background-image: url("images/hawamahal.png");
+  width: 300px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10%;
+  border: 3px solid #582f0e;
 }
 
-#places9
-{
-    background-image: url(ooty.png);
-    width:300px;
-    height:300px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-     border-radius: 10%;
-     border: 3px solid #582f0e;
+#places9 {
+  background-image: url("images/ooty.png");
+  width: 300px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10%;
+  border: 3px solid #582f0e;
 }
 
-#places10
-{
-    background-image: url(ganga.png);
-    width:300px;
-    height:300px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-     border-radius: 10%;
-     border: 3px solid #582f0e;
+#places10 {
+  background-image: url("images/ganga.png");
+  width: 300px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10%;
+  border: 3px solid #582f0e;
 }
 
-#places11
-{
-    background-image: url(meghalya.png);
-    width:300px;
-    height:300px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-     border-radius: 10%;
-     border: 3px solid #582f0e;
+#places11 {
+  background-image: url("images/meghalya.png");
+  width: 300px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10%;
+  border: 3px solid #582f0e;
 }
 
-#places12
-{
-    background-image: url(jag.png);
-    width:300px;
-    height:300px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-     border-radius: 10%;
-     border: 3px solid #582f0e;
+#places12 {
+  background-image: url("images/jag.png");
+  width: 300px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10%;
+  border: 3px solid #582f0e;
 }
-.top_dest{
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-
+.top_dest {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
-
-.seasonal_trending{
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-    
+.seasonal_trending {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
-.seaTrend{
-    display:flex;
-    flex-direction: row;
-    padding-left:2rem;
-    gap: 25vmin;
-    
-
+.seaTrend {
+  display: flex;
+  flex-direction: row;
+  padding-left: 2rem;
+  gap: 25vmin;
 }
-.seap img{
-    height: 70vh;
-    width: 45vw;
-    background-size:cover;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgb(196, 159, 159);
-    border: 10px,double,darkgreen;
-
-
+.seap img {
+  height: 70vh;
+  width: 45vw;
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgb(196, 159, 159);
+  border: 10px, double, darkgreen;
 }
 
-
-
-.seainfo{
-    margin-top: 12vmin;
-    margin-right: 30rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap:5vmin;
-    
+.seainfo {
+  margin-top: 12vmin;
+  margin-right: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vmin;
 }
 
-.explore{
-    
-    height:10vmin;
-    width: 30vmin;
-    background-color: darkgreen;
-    font-size: 40px;
-    color:white;
-    border-radius: 20px 0px 20px 0px;
-    animation: zoom 1s infinite ease-in-out;
+.explore {
+  height: 10vmin;
+  width: 30vmin;
+  background-color: darkgreen;
+  font-size: 40px;
+  color: white;
+  border-radius: 20px 0px 20px 0px;
+  animation: zoom 1s infinite ease-in-out;
 }
-.explore:hover{
-    cursor: pointer;
+.explore:hover {
+  cursor: pointer;
 }
-.seainfo p{
-    font-size: 2.5vmin;
-    background-color: #d8e4cf;
-    width: 50vmin;
-    padding:2rem;
-    border-radius: 20px 5px 20px 5px;
+.seainfo p {
+  font-size: 2.5vmin;
+  background-color: #d8e4cf;
+  width: 50vmin;
+  padding: 2rem;
+  border-radius: 20px 5px 20px 5px;
+}
+.seainfo p b {
+  font-size: 50px;
+}
 
-    
-
-}
-.seainfo p b{
-    font-size: 50px;
-
-}
- 
 @keyframes zoom {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
-
-
-
-
