@@ -16,6 +16,15 @@ function timer() {
 // let places = document.querySelectorAll(".places");
 // let infoBox = document.querySelectorAll("#infoBox");
 
+const menuLinks = document.querySelectorAll(".menu a");
+
+menuLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    menuLinks.forEach((item) => item.classList.remove("active"));
+    link.classList.add("active");
+  });
+});
+
 const placeInfo = {
   places1: {
     name: "Taj Mahal",
