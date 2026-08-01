@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore</title>
+    <link rel="stylesheet" href="style_ex.css" />
+  </head>
+  <body>
+    <section class="input">
+      <div class="input-box">
+        <div class="status-bar">
+          <span>9:41</span>
+          <div class="status-icons">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="header-row">
+          <h1 class="heading">Customize Your Journey Trip</h1>
+        </div>
+
+        <div class="hero-card">
+          <div class="plane-illustration">✈</div>
+        </div>
+
+        <div class="travel-tabs">
+          <button type="button" class="tab active" data-tab="season">Season</button>
+          <button type="button" class="tab" data-tab="days">Duration</button>
+          <button type="button" class="tab" data-tab="type">Type</button>
+        </div>
+
+        <div class="get_input">
+          <select class="season" id="season" data-field="season">
+            <option value="" selected disabled hidden>Choose a season</option>
+            <option value="Winter">Winter</option>
+            <option value="Monsoon">Monsoon</option>
+            <option value="Summer">Summer</option>
+          </select>
+
+          <select class="days" id="days" data-field="days">
+            <option value="" selected disabled hidden>Choose duration</option>
+            <option value="1-2 Days">1–2 Days</option>
+            <option value="3-4 Days">3–4 Days</option>
+            <option value="5-7 Days">5–7 Days</option>
+            <option value="8-10 Days">8–10 Days</option>
+            <option value="10+ Days">10+ Days</option>
+          </select>
+
+          <select class="type" id="type" data-field="type">
+            <option value="" selected disabled hidden>Choose type</option>
+            <option value="Beach">Beach</option>
+            <option value="Mountain">Mountain</option>
+            <option value="Heritage">Heritage</option>
+            <option value="Wildlife">Wildlife</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Religious">Religious</option>
+            <option value="Nature">Nature</option>
+          </select>
+        </div>
+
+
+        <div class="activities">
+          <p>Activities:</p>
+          <label><input type="checkbox" value="Sightseeing" /> Sightseeing</label>
+          <label><input type="checkbox" value="Trekking" /> Trekking</label>
+          <label><input type="checkbox" value="Food" /> Food</label>
+          <label><input type="checkbox" value="Shopping" /> Shopping</label>
+          <label><input type="checkbox" value="Adventure" /> Adventure</label>
+          <label><input type="checkbox" value="Water Sports" /> Water Sports</label>
+          <label><input type="checkbox" value="Cultural Experiences" /> Cultural Experiences</label>
+        </div>
+
+        <button type="button" class="search-btn">Search</button>
+      </div>
+    </section>
+    <script src="app_ex.js"></script>
+  </body>
+</html>
+
+  </body>
+</html>
