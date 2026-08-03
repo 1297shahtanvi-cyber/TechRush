@@ -10,7 +10,7 @@
     <section class="input">
       <div class="input-box">
         <div class="status-bar">
-          <span>9:41</span>
+          
           <div class="status-icons">
             <span></span>
             <span></span>
@@ -23,41 +23,33 @@
         </div>
 
         <div class="hero-card">
-          <div class="plane-illustration">✈</div>
+          <div class="plane-illustration"><img src="images/ex_within.png"></div>
         </div>
 
         <div class="travel-tabs">
-          <button type="button" class="tab active" data-tab="season">Season</button>
-          <button type="button" class="tab" data-tab="days">Duration</button>
+          <button type="button" class="tab active" data-tab="season">Weather</button>
           <button type="button" class="tab" data-tab="type">Type</button>
+          <button type="button" class="tab" data-tab="crowd">Crowd</button>
         </div>
 
         <div class="get_input">
           <select class="season" id="season" data-field="season">
-            <option value="" selected disabled hidden>Choose a season</option>
-            <option value="Winter">Winter</option>
-            <option value="Monsoon">Monsoon</option>
-            <option value="Summer">Summer</option>
-          </select>
-
-          <select class="days" id="days" data-field="days">
-            <option value="" selected disabled hidden>Choose duration</option>
-            <option value="1-2 Days">1–2 Days</option>
-            <option value="3-4 Days">3–4 Days</option>
-            <option value="5-7 Days">5–7 Days</option>
-            <option value="8-10 Days">8–10 Days</option>
-            <option value="10+ Days">10+ Days</option>
+            <option value="" selected disabled hidden>Choose a Weather</option>
+            <option value="Sunny">Sunny</option>
+            <option value="Hot">Hot</option>
+            <option value="Rainy">Rainy</option>
+            <option value="Snowy">Snowy</option>
+            <option value="Pleasant">Pleasant</option>
           </select>
 
           <select class="type" id="type" data-field="type">
-            <option value="" selected disabled hidden>Choose type</option>
-            <option value="Beach">Beach</option>
-            <option value="Mountain">Mountain</option>
-            <option value="Heritage">Heritage</option>
-            <option value="Wildlife">Wildlife</option>
-            <option value="Adventure">Adventure</option>
-            <option value="Religious">Religious</option>
-            <option value="Nature">Nature</option>
+            <option value="" selected disabled hidden>Choose Type</option>
+            
+          </select>
+
+           <select class="crowd" id="crowd" data-field="crowd">
+            <option value="" selected disabled hidden>Choose Crowd</option>
+           
           </select>
         </div>
 
@@ -75,21 +67,13 @@
 
         <button type="button" class="search-btn">Search</button>
       </div>
+      
     </section>
-
     <section class="show">
-
-
-
-      <h1>Travel Planner 🌍</h1>
-
-
-<!-- Results -->
-<div id="results" class="results-container"></div>
-
-
+     <div class="results" id="results">
+     </div>
     </section>
-    <script src="app_ex.js"></script>
+    <script type="module" src="app_ex.js"></script>
   </body>
 </html>
 

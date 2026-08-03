@@ -10,7 +10,7 @@ function timer() {
   setInterval(() => {
     sent1.innerText = text[i];
     i = (i + 1) % text.length;
-  }, 5000);
+  }, 2500);
 }
 
 // let places = document.querySelectorAll(".places");
@@ -135,6 +135,7 @@ places.forEach((place) => {
     div.style.padding = "1rem";
     div.style.boxSizing = "border-box";
     div.style.borderRadius = "13% 13% 0 0";
+   
 
     place.appendChild(div);
   });
@@ -155,3 +156,31 @@ function typefun() {
   }
 }
 typefun();
+
+const sections=document.querySelectorAll("section");
+const navlinks=document.querySelectorAll(".menu a");
+
+const observer=new IntersectionObserver((entries)=>{
+   console.log(entries);
+  entries.forEach(entry=>{
+  if(entry.isIntersecting)
+  {
+    navlinks.forEach(link=>{
+      link.classList.remove("active");
+    })
+    const activelink=document.querySelector(`.menu a[href="#${entry.target.id}"]`)
+    if(activelink)
+    {
+      activelink.classList.add("active");
+    }
+
+  }
+  }); 
+},
+{
+    threshold:0.4
+});
+
+sections.forEach(section=>{
+  observer.observe(section);
+})
