@@ -1,6 +1,7 @@
 console.log("hello");
 const tabs = document.querySelectorAll(".tab");
 const selects = document.querySelectorAll("select[data-field]");
+const back = document.querySelector(".back");
 
 function setActiveTab(field) {
   tabs.forEach((tab) => {
@@ -88,8 +89,8 @@ function displayPlaces(places) {
             <p>Best time: ${place.best}</p>
             <p>Budget: ${place.budget}</p>
         `;
-        card.style.backgroundImage="url('images/card.png')";
-       card.style.backgroundSize="cover";
+    //     card.style.backgroundImage="url('images/card.png')";
+    //    card.style.backgroundSize="cover";
         resultsContainer.appendChild(card);
         
         resultsContainer.scrollIntoView({
@@ -158,4 +159,10 @@ typeSelect.addEventListener("change", function () {
         crowdSelect.appendChild(option);
     });
 });
+
+
+back.addEventListener("click", () => {
+    window.close();
+});
+
 

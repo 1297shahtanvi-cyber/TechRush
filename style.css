@@ -5,17 +5,26 @@
 html {
   scroll-behavior: smooth;
 }
+
 body {
-  
   background-color: aliceblue;
   text-align: center;
-  background-image: url(images/bg2.jpeg);
+
+  background-image:
+    linear-gradient(
+      rgba(0, 20, 35, 0.4),
+      rgba(0, 20, 35, 0.4)
+    ),
+    url("images/bg3.jpeg");
+
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  
 }
+
+
+
 .navbar {
   position: sticky;
   top: 0;
@@ -39,7 +48,7 @@ body {
 }
 .heading {
   font-size: 6vmin;
-  color: rgb(164, 203, 238);
+  color: #caf0f8;
   text-shadow: 0 0 5px rgb(0, 38, 128);
 }
 
@@ -131,7 +140,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 10%;
-  border: 10px solid white;
+  border: 4px solid white;
 }
 
 #places2 {
@@ -142,7 +151,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 10%;
-  border: 10px solid white;
+  border: 4px solid white;
 }
 #places3 {
   background-image: url("images/goa.png");
@@ -152,7 +161,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 10%;
-  border: 10px solid white;
+  border: 4px solid white;
 }
 #places4 {
   background-image: url("images/csmt.png");
@@ -162,7 +171,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 10%;
-  border: 10px solid white;
+  border: 4px solid white;
 }
 #places5 {
   background-image: url("images/ellora.png");
@@ -172,7 +181,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 10%;
-  border: 10px solid white;
+  border: 4px solid white;
 }
 #places6 {
   background-image: url("images/nalanda.png");
@@ -182,7 +191,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 10%;
-  border: 10px solid white;
+  border: 4px solid white;
 }
 #places7 {
   background-image: url("images/golden_temple.png");
@@ -192,7 +201,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 10%;
-  border: 10px solid white;
+  border: 4px solid white;
 }
 
 #places8 {
@@ -203,7 +212,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 10%;
-  border: 10px solid white;
+  border: 4px solid white;
 }
 
 #places9 {
@@ -214,7 +223,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 10%;
-  border: 10px solid white;
+  border: 4px solid white;
 }
 
 #places10 {
@@ -225,7 +234,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 10%;
-  border: 10px solid white;
+  border: 4px solid white;
 }
 
 #places11 {
@@ -236,7 +245,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 10%;
-  border: 10px solid white;
+  border: 4px solid white;
 }
 
 #places12 {
@@ -247,7 +256,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 10%;
-  border: 10px solid white;
+  border: 4px solid white;
 }
 .top_dest {
   margin-top: 5rem;
@@ -287,7 +296,7 @@ body {
 .explore {
   height: 10vmin;
   width: 30vmin;
-  background-color:#90e0ef;
+  background-color:#caf0f8;
   font-size: 40px;
   color: rgb(18, 2, 2);
   border-radius: 20px 0px 20px 0px;
@@ -298,7 +307,7 @@ body {
  box-shadow: 0 0 5px #03045e,
     0 0 10px #0077b6,
     0 0 20px #90e0ef;
-    background-color: #caf0f8;
+    background-color: #90e0ef;
     color:#0D0A1F;   
     transition : all 0.3s ease;  
     border: none;
@@ -325,4 +334,14 @@ body {
   100% {
     transform: scale(1);
   }
+}
+
+
+.more{
+  border: none;
+    outline: none;
+    background: transparent;
+    box-shadow: none;
+    color: white;
+    background:  #003049;
 }
