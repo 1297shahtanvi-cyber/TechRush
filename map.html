@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAP</title>
+   <link 
+        rel="stylesheet" 
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <link rel="stylesheet" href="map.css">
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+>
+</head>
+
+<body>
+    <a href="index.html"><button class="back"><</button></a>
+    <section id="maps" class="map-section">
+
+    
+    <!-- <div class="map-container">
+        <div class="map-heading">
+        <h1>Explore Destinations</h1>
+        
+    </div>
+     <div class="map-search">
+    <input type="text" id="placeSearch" placeholder="Search destination...">
+    <button id="searchBtn">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+  </div>
+         <div class="crowd-index">
+  <div><i class="fa-solid fa-location-dot green"></i> Low Crowd</div>
+  <div><i class="fa-solid fa-location-dot yellow"></i> Moderate Crowd</div>
+  <div><i class="fa-solid fa-location-dot red"></i> High Crowd</div>
+</div>
+      
+        <div id="map"></div>
+       
+    </div> -->
+<div class="map-container">
+
+    <div class="map-heading">
+        <h1>Explore Destinations</h1>
+        <p>Discover India's most beautiful destinations with live crowd insights.</p>
+    </div>
+
+    <div class="map-search">
+        <input type="text" id="placeSearch" placeholder="Search destination or state...">
+        <button id="searchBtn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div>
+
+    <div class="map-wrapper">
+
+        <div class="crowd-index">
+            <h4>Crowd Level</h4>
+
+            <div><i class="fa-solid fa-location-dot green"></i>Low Crowd</div>
+            <div><i class="fa-solid fa-location-dot yellow"></i>Moderate</div>
+            <div><i class="fa-solid fa-location-dot red"></i>High Crowd</div>
+        </div>
+
+        <div id="map"></div>
+
+    </div>
+
+</div>
+</section>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script type="module" src="map.js"></script>
+</body>
+</html>

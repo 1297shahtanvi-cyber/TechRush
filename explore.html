@@ -1,85 +1,296 @@
+```html
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Explore</title>
-    <link rel="stylesheet" href="style_ex.css" />
-  </head>
-  <body>
+
+    <link rel="stylesheet" href="style_ex.css">
+</head>
+
+<body>
+
     <div class="content">
-      <button class="back"><</button>
-    <section class="input">
-      <div class="input-box">
-        <div class="status-bar">
-          
-          <div class="status-icons">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-       
-        <div class="header-row">
-          <h1 class="heading">Customize Your Journey</h1>
-        </div>
 
-        <div class="hero-card">
-          <div class="plane-illustration"><img src="images/ex_within2.jpeg"></div>
-        </div>
-
-        <div class="travel-tabs">
-          <button type="button" class="tab active" data-tab="season">Weather</button>
-          <button type="button" class="tab" data-tab="type">Type</button>
-          <button type="button" class="tab" data-tab="crowd">Crowd</button>
-          
-        </div>
-
-        <div class="get_input">
-          <select class="season" id="season" data-field="season">
-            <option value="" selected disabled hidden>Choose a Weather</option>
-            <option value="Sunny">Sunny</option>
-            <option value="Hot">Hot</option>
-            <option value="Rainy">Rainy</option>
-            <option value="Snowy">Snowy</option>
-            <option value="Pleasant">Pleasant</option>
-          </select>
-
-          <select class="type" id="type" data-field="type">
-            <option value="" selected disabled hidden>Choose Type</option>
-            
-          </select>
-
-           <select class="crowd" id="crowd" data-field="crowd">
-            <option value="" selected disabled hidden>Choose Crowd</option>
-           
-          </select>
-        </div>
+        <!-- Back Button -->
+        <button class="back" type="button">&lt;</button>
 
 
-        <div class="activities">
-          <p>Activities:</p>
-          <label><input type="checkbox" value="Sightseeing" /> Sightseeing</label>
-          <label><input type="checkbox" value="Trekking" /> Trekking</label>
-          <label><input type="checkbox" value="Food" /> Food</label>
-          <label><input type="checkbox" value="Shopping" /> Shopping</label>
-          <label><input type="checkbox" value="Adventure" /> Adventure</label>
-          <label><input type="checkbox" value="Water Sports" /> Water Sports</label>
-          <label><input type="checkbox" value="Cultural Experiences" /> Cultural Experiences</label>
-        </div>
+        <!-- ================= PLANNER ================= -->
 
-        <button type="button" class="search-btn">Search</button>
-      </div>
-      
-    </section>
-    <section class="show">
-     <div class="results" id="results">
-     </div>
-    </section>
+        <section class="input">
+
+            <div class="input-box">
+
+                <!-- Heading -->
+                <div class="header-row">
+
+                    <span class="section-tag">
+                        ✦ PERSONALIZED TRAVEL PLANNER
+                    </span>
+
+                    <h1 class="heading">
+                        Customize Your Journey
+                    </h1>
+
+                    <p class="subtitle">
+                        Tell us your preferences and discover destinations
+                        tailored to your journey.
+                    </p>
+
+                </div>
+
+
+                <!-- Hero Image -->
+                <div class="hero-card">
+
+                    <div class="plane-illustration">
+
+                        <img
+                            src="images/ex_within2.png"
+                            alt="Beautiful travel destination"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Travel Filters -->
+                <div class="travel-tabs">
+
+                    <button
+                        type="button"
+                        class="tab active"
+                        data-tab="season">
+                        ☀ Weather
+                    </button>
+
+                    <button
+                        type="button"
+                        class="tab"
+                        data-tab="type">
+                        🏔 Type
+                    </button>
+
+                    <button
+                        type="button"
+                        class="tab"
+                        data-tab="crowd">
+                        👥 Crowd
+                    </button>
+
+                </div>
+
+
+                <!-- Dropdowns -->
+                <div class="get_input">
+
+                    <div class="select-group">
+
+                        <label for="season">
+                            Weather
+                        </label>
+
+                        <select
+                            class="season"
+                            id="season"
+                            data-field="season">
+
+                            <option
+                                value=""
+                                selected
+                                disabled
+                                hidden>
+                                Choose a Weather
+                            </option>
+
+                            <option value="Sunny">
+                                Sunny
+                            </option>
+
+                            <option value="Hot">
+                                Hot
+                            </option>
+
+                            <option value="Rainy">
+                                Rainy
+                            </option>
+
+                            <option value="Snowy">
+                                Snowy
+                            </option>
+
+                            <option value="Pleasant">
+                                Pleasant
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="select-group">
+
+                        <label for="type">
+                            Destination Type
+                        </label>
+
+                        <select
+                            class="type"
+                            id="type"
+                            data-field="type">
+
+                            <option
+                                value=""
+                                selected
+                                disabled
+                                hidden>
+                                Choose Type
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="select-group">
+
+                        <label for="crowd">
+                            Crowd Level
+                        </label>
+
+                        <select
+                            class="crowd"
+                            id="crowd"
+                            data-field="crowd">
+
+                            <option
+                                value=""
+                                selected
+                                disabled
+                                hidden>
+                                Choose Crowd
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Activities -->
+                <div class="activities">
+
+                    <p class="activity-title">
+                        What would you like to do?
+                    </p>
+
+                    <div class="activity-options">
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="Sightseeing">
+                            <span>Sightseeing</span>
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="Trekking">
+                            <span>Trekking</span>
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="Food">
+                            <span>Food</span>
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="Shopping">
+                            <span>Shopping</span>
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="Adventure">
+                            <span>Adventure</span>
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="Water Sports">
+                            <span>Water Sports</span>
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="Cultural Experiences">
+                            <span>Cultural Experiences</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Search -->
+                <button
+                    type="button"
+                    class="search-btn">
+
+                    Find My Perfect Trip
+                    <span>→</span>
+
+                </button>
+
+
+                <!-- Small Features -->
+                <div class="planner-features">
+
+                    <span>✓ Personalized</span>
+                    <span>✓ Smart Recommendations</span>
+                    <span>✓ Fast Results</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RESULTS ================= -->
+
+        <section class="show">
+
+            <div
+                class="results"
+                id="results">
+            </div>
+
+        </section>
+
     </div>
-    <script type="module" src="app_ex.js"></script>
-  </body>
-</html>
 
-  </body>
+
+    <script
+        type="module"
+        src="app_ex.js">
+    </script>
+
+</body>
+
 </html>
+```

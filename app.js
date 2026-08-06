@@ -1,36 +1,33 @@
-let sent1 = document.querySelector("#sent1");
 const text = [
-  "Extraordinary Journeys, Perfectly Crafted!",
-  "Adventure Starts With a Click!",
-  "Where Every Journey Begins!",
+  "Extraordinary Journeys,Perfectly Crafted!",
+  "Unforgettable Journeys, Beautifully Planned!",
+  "Remarkable Destinations, Perfectly Chosen!!"
 ];
 let i = 0;
+
+function timer()
+{
+setInterval(()=>{
+    sent1.innerText=text[i];
+    i=(i+1)%text.length;
+},4000
+)}
+
 timer();
-function timer() {
-  setInterval(() => {
-    sent1.innerText = text[i];
-    i = (i + 1) % text.length;
-  }, 2500);
-}
+// const more = document.getElementById("more");
 
-// let places = document.querySelectorAll(".places");
-// let infoBox = document.querySelectorAll("#infoBox");
-
-const menuLinks = document.querySelectorAll(".menu a");
-
-menuLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    menuLinks.forEach((item) => item.classList.remove("active"));
-    link.classList.add("active");
-  });
-});
+// more.addEventListener("change", function () {
+//     if (this.value !== "") {
+//         window.location.href = this.value;
+//     }
+// });
 
 const placeInfo = {
   places1: {
     name: "Taj Mahal",
     famous:
       "A UNESCO World Heritage Site and symbol of love, renowned for its stunning white marble architecture.",
-    rating: 4.9,
+    rating: 4.9
   },
 
   places2: {
@@ -135,7 +132,7 @@ places.forEach((place) => {
     div.style.padding = "1rem";
     div.style.boxSizing = "border-box";
     div.style.borderRadius = "13% 13% 0 0";
-   
+    
 
     place.appendChild(div);
   });
@@ -144,43 +141,222 @@ places.forEach((place) => {
   });
 });
 
-let web = document.querySelector("#web");
-let j = 0;
-web_name = "#Traveller";
-function typefun() {
-  if (j < web_name.length) {
-    web.innerText = web.innerText + web_name.charAt(j);
+// let web = document.querySelector("#web");
+// let j = 0;
+// web_name = "Excurso";
+// function typefun() {
+//   if (j < web_name.length) {
+//     web.innerText = web.innerText + web_name.charAt(j);
 
-    j++;
-    setTimeout(typefun, 200);
-  }
-}
-typefun();
+//     j++;
+//     setTimeout(typefun, 200);
+//   }
+// }
+// typefun();
 
 const sections=document.querySelectorAll("section");
 const navlinks=document.querySelectorAll(".menu a");
 
-const observer=new IntersectionObserver((entries)=>{
-   console.log(entries);
-  entries.forEach(entry=>{
-  if(entry.isIntersecting)
-  {
-    navlinks.forEach(link=>{
-      link.classList.remove("active");
-    })
-    const activelink=document.querySelector(`.menu a[href="#${entry.target.id}"]`)
-    if(activelink)
-    {
-      activelink.classList.add("active");
+const currentPage = window.location.pathname.split("/").pop();
+
+// Only run on homepage
+if (currentPage === "" || currentPage === "index.html") {
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                navlinks.forEach(link => {
+                    link.classList.remove("active");
+                });
+
+                const activeLink = document.querySelector(
+                    `.menu a[href="#${entry.target.id}"]`
+                );
+
+                if (activeLink) {
+                    activeLink.classList.add("active");
+                }
+            }
+
+        });
+
+    }, {
+        threshold: 0.4
+    });
+
+    sections.forEach(section => observer.observe(section));
+}
+
+// Highlight Checklist page
+if (currentPage === "checklist.html") {
+    document.querySelector('.menu a[href="checklist.html"]')
+        ?.classList.add("active");
+}
+
+// Highlight Map page
+if (currentPage === "map.html") {
+    document.querySelector('.menu a[href="map.html"]')
+        ?.classList.add("active");
+}
+
+// ----------------------------budget-------------------------------------------------
+
+
+function toList(text) {
+  return text
+    .replace(/\*\*/g, "")
+    .replace(/\*/g, "")
+    .replace(/#/g, "")
+    .replace(/₹\s+(\d+)/g, "₹$1")
+    .split("\n") // ✅ ONLY split by line
+    .filter((item) => item.trim() !== "")
+    .map((item) => `<li>${item.trim()}</li>`)
+    .join("");
+}
+
+async function getPlan() {
+  const data = {
+    
+    place: document.getElementById("place").value,
+    days: document.getElementById("days").value,
+    people: document.getElementById("people").value,
+    type: document.getElementById("type").value,
+  };
+  const btn=document.querySelector("#budget-planner button");
+
+btn.disabled=true;
+
+btn.innerHTML="⏳ Generating...";
+
+  const budgetBox = document.getElementById("budget");
+  const itineraryBox = document.getElementById("itinerary");
+  const resultsGrid = document.querySelector(".results-grid");
+  const budgetHeading = document.querySelector(
+    ".results-panel .result-heading",
+  );
+  const itineraryHeading = document.querySelectorAll(
+    ".results-panel .result-heading",
+  )[1];
+
+ 
+
+  resultsGrid.hidden = true;
+  budgetBox.hidden = true;
+  itineraryBox.hidden = true;
+  budgetHeading.hidden = true;
+  itineraryHeading.hidden = true;
+
+  try {
+    // 💰 Budget API Call
+    const budgetRes = await fetch("http://localhost:3000/budget", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    const budgetData = await budgetRes.json();
+
+    // 🗺️ Itinerary API Call (✅ MOVE THIS UP)
+    const itiRes = await fetch("http://localhost:3000/itinerary", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    const itiData = await itiRes.json();
+
+    // ✅ SAFETY CHECK (NOW CORRECT)
+    if (!budgetData.result || !itiData.result) {
+      alert("⚠️ No data received from API. Check backend or API key.");
+      return;
     }
 
-  }
-  }); 
-},
-{
-    threshold:0.4
+    // 💰 CLEAN BUDGET
+    const cleanBudget = budgetData.result
+      .replace(/\*\*/g, "")
+      .replace(/\*/g, "")
+      .replace(/₹\s+(\d+)/g, "₹$1");
+
+    const budgetItems = cleanBudget
+  .split("\n")
+  .filter(x => x.trim());
+
+let budgetCards="";
+
+budgetItems.forEach(item=>{
+
+const parts=item.split(":");
+
+budgetCards+=`
+
+<div class="budget-card">
+
+<h4>${parts[0]}</h4>
+
+<p>${parts[1]||""}</p>
+
+</div>
+
+`;
+
 });
 
-sections.forEach(section=>{
-  observer.observe(section);
-})
+budgetBox.innerHTML=budgetCards;
+
+    // 🗺️ CLEAN ITINERARY
+    const cleanItinerary = itiData.result
+      .replace(/\*\*/g, "")
+      .replace(/\*/g, "")
+      .replace(/₹\s+(\d+)/g, "₹$1");
+
+    const days = cleanItinerary
+      .split(/Day\s*\d+[:\-]?/i)
+      .filter((d) => d.trim());
+
+    let cards = "";
+
+    days.forEach((day, index) => {
+      let items = day
+        .split("\n")
+        .filter((x) => x.trim() !== "")
+        .slice(0, 3); // ✅ LIMIT to 3 items ONLY
+
+      cards += `
+    <div class="card">
+      <h4>🗓 Day ${index + 1}</h4>
+      <ul>
+        ${items.map((i) => `<li>${i}</li>`).join("")}
+      </ul>
+    </div>
+  `;
+    });
+
+    itineraryBox.innerHTML = cards;
+    resultsGrid.hidden = false;
+    budgetBox.hidden = false;
+    itineraryBox.hidden = false;
+    budgetHeading.hidden = false;
+    itineraryHeading.hidden = false;
+
+    btn.innerHTML = "✅ Plan Ready";
+
+setTimeout(() => {
+  btn.innerHTML = "🚀 Generate Plan";
+  btn.disabled = false;
+}, 2000);
+
+    document.querySelector(".results-grid").scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  } catch (err) {
+    console.error("Frontend Error:", err);
+  }
+}

@@ -42,6 +42,7 @@ tabs.forEach((tab) => {
 updateSelectHighlight();
  
 import { DESTINATIONS } from "./data.js";
+import { crowd_label } from "./data.js";
 //to filter places 
 const search=document.querySelector(".search-btn");
 search.addEventListener("click",findPlaces);
@@ -75,29 +76,31 @@ function displayPlaces(places) {
         return;
     }
 
-    places.forEach(place => {
-        
-        const card = document.createElement("div");
+   places.forEach(place => {
 
-        card.classList.add("place-card");
-        card.style.width="300px";
-        card.style.height="300px";
-        card.innerHTML = `
-            <h2>${place.name}</h2>
-            <p>${place.state}</p>
-            <p>${place.tagline}</p>
-            <p>Best time: ${place.best}</p>
-            <p>Budget: ${place.budget}</p>
-        `;
-    //     card.style.backgroundImage="url('images/card.png')";
-    //    card.style.backgroundSize="cover";
-        resultsContainer.appendChild(card);
-        
-        resultsContainer.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-        });
-    });
+    const card = document.createElement("div");
+
+    card.classList.add("place-card");
+
+    card.innerHTML = `
+        <h2>${place.name}</h2>
+
+        <p>${place.state}</p>
+
+        <p>${place.tagline}</p>
+
+        <p>Best time: ${place.best}</p>
+
+        <p>Budget: ${place.budget}</p>
+    `;
+
+    resultsContainer.appendChild(card);
+});
+
+resultsContainer.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+});
 }
 
 // to filter options
@@ -154,7 +157,8 @@ typeSelect.addEventListener("change", function () {
         const option = document.createElement("option");
 
         option.value = crowd;
-        option.textContent = crowd;
+        
+        option.textContent = crowd_label[crowd];
 
         crowdSelect.appendChild(option);
     });
